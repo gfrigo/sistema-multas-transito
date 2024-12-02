@@ -1,9 +1,10 @@
 public abstract class RegraMulta {
-  private static double valorMultaLeve;
-  private static double valorMultaMedia;
-  private static double valorMultaGrave;
+  private static double valorMultaLeve = 100.0;
+  private static double valorMultaMedia = 250.0;
+  private static double valorMultaGrave = 500.0;
 
   public Multa calcularMulta(Ocorrencia ocorrencia, int nivel){ //calcula multa pelo nivel dela
+    String motivo = obterDescricaoMulta(ocorrencia);
     double valorMulta;
     switch (nivel) {
       case 1:
@@ -22,10 +23,10 @@ public abstract class RegraMulta {
         valorMulta = 0.0;
         break;
     }
-    return new Multa(valorMulta, obterDescricaoMulta(), ocorrencia.getData(), ocorrencia.getPlaca());
+    return new Multa(valorMulta, motivo, ocorrencia.getData(), ocorrencia.getPlaca());
   }
 
   public abstract int verificaNivelMulta(Ocorrencia ocorrencia);
 
-  public abstract String obterDescricaoMulta();
+  public abstract String obterDescricaoMulta(Ocorrencia ocorrencia);
 }
