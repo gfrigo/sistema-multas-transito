@@ -28,4 +28,14 @@ public enum TipoVeiculo {
     throw new IllegalArgumentException("Código de veículo inválido: " + codigo);
   }
 
+  // Método para obter a descrição pelo código
+  public static String getDescricaoPorCodigo(int codigo) {
+    for (TipoVeiculo tipo : values()) {
+        if (tipo.getCodigo() == codigo) {
+            return tipo.getDescricao();
+        }
+    }
+    return "Desconhecido";
+}
+
 }

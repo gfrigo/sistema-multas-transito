@@ -1,7 +1,22 @@
 public abstract class RegraMulta {
+  //private String nomeLogradouro;
   private static double valorMultaLeve = 100.0;
   private static double valorMultaMedia = 250.0;
   private static double valorMultaGrave = 500.0;
+
+    /* 
+  public RegraMulta(String nomeLogradouro) {
+    this.nomeLogradouro = nomeLogradouro;
+  }
+
+    
+  public String getNomeLogradouro() {
+    return nomeLogradouro;
+  }
+*/
+  public abstract int verificaNivelMulta(Ocorrencia ocorrencia);
+
+  public abstract String obterDescricaoMulta(Ocorrencia ocorrencia);
 
   public Multa calcularMulta(Ocorrencia ocorrencia, int nivel){ //calcula multa pelo nivel dela
     String motivo = obterDescricaoMulta(ocorrencia);
@@ -26,7 +41,5 @@ public abstract class RegraMulta {
     return new Multa(valorMulta, motivo, ocorrencia.getData(), ocorrencia.getPlaca());
   }
 
-  public abstract int verificaNivelMulta(Ocorrencia ocorrencia);
 
-  public abstract String obterDescricaoMulta(Ocorrencia ocorrencia);
 }
