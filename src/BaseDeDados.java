@@ -25,6 +25,7 @@ public class BaseDeDados {
     regras.add(new RegraVelocidade(50, "Rua Mourato Coelho"));
     regras.add(new RegraVelocidade(30, "Rua Fiorelli Peccicacco"));
     regras.add(new RegraVelocidade(30, "Rua Clélia"));
+    regras.add(new RegraVelocidade(50, "Avenida dos Autonomistas"));
 
     //adicionando algumas regras de rodízio, dias de 1 a 7, sendo 1 = domingo e 7 = sábado
     regras.add(new RegraRodizio(1, new String[]{"Avenida Ayrton Senna"}, 2, 0)); // Final de placa 1, veículos leves, segunda
