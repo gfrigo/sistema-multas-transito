@@ -3,8 +3,7 @@ public class RegraCorredorOnibus extends RegraMulta{
   private int horaFinal;
   private String nomeLogradouro;
 
-  public RegraCorredorOnibus(String nomeLogradouro, int horaInicial, int horaFinal) {
-    super(nomeLogradouro); // Define o logradouro no construtor da superclasse
+  public RegraCorredorOnibus(int horaInicial, int horaFinal, String nomeLogradouro) {
     this.horaInicial = horaInicial;
     this.horaFinal = horaFinal;
     this.nomeLogradouro = nomeLogradouro;

@@ -5,7 +5,8 @@ public class RegraVelocidade extends RegraMulta {
   private static double porcentagemMultaGrave = 0.4; //40%
 
   public RegraVelocidade(int velocidadeMaxima, String nomeLogradouro) {
-    super(nomeLogradouro);
+    //super(nomeLogradouro);
+    this.nomeLogradouro = nomeLogradouro;
     this.velocidadeMaxima = velocidadeMaxima;
   }
 
@@ -39,7 +40,7 @@ public class RegraVelocidade extends RegraMulta {
 
   @Override
   public String obterDescricaoMulta(Ocorrencia ocorrencia){
-    return "Excesso de velocidade registrado em " + ocorrencia.getNomeLogradouro() +
+    return "Excesso de velocidade registrado em " + nomeLogradouro +
                 ". Velocidade máxima permitida: " + velocidadeMaxima + " km/h " +
                 "(caminhões têm limite reduzido em 10 km/h).";
   };

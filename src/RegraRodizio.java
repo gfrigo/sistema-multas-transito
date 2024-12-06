@@ -6,8 +6,7 @@ public class RegraRodizio extends RegraMulta {
   private int diaDaSemana;
   private int tipoVeiculo;
 
-  public RegraRodizio(int velocidadeMaxima, String nomeLogradouro) {
-    super(nomeLogradouro);
+  public RegraRodizio(int finalPlaca, String[] logradourosAfetados, int diaDaSemana, int tipoVeiculo) {
     this.finalPlaca = finalPlaca;
     this.logradourosAfetados = logradourosAfetados;
     this.diaDaSemana = diaDaSemana;

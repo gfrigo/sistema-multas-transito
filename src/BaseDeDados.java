@@ -14,12 +14,20 @@ public class BaseDeDados {
     this.regras = new ArrayList<>();
   }
 
-  public void inicializarRegras(){ //inicia as regras de validação do sistema
-    regras.add(new RegraVelocidade());
-    regras.add(new RegraRodizio());
-    regras.add(new RegraCorredorOnibus());
-    //a principio são so essas 3 regras... eu pensei em colocar uma de placa tampada e etc, mas vamos terminar essas primeiro
-  }
+  public void inicializarRegras() {
+    // Adiciona algumas regras de velocidade
+    regras.add(new RegraVelocidade(60, "Avenida Paulista"));
+    regras.add(new RegraVelocidade(50, "Avenida Rebouças"));
+
+    // Adiciona algumas regras de rodízio
+    regras.add(new RegraRodizio(1, new String[]{"Avenida Airton Sena"}, 2, 0)); // Final de placa 1, veículos leves, terça-feira
+    regras.add(new RegraRodizio(7, new String[]{"Marginal Tietê"}, 1, 1)); // Final de placa 7, caminhões, quinta-feira
+
+    // Adiciona algumas regras de corredor de ônibus
+    regras.add(new RegraCorredorOnibus(6, 10, "Rua Consolação")); // Corredor de ônibus das 6h às 10h
+    regras.add(new RegraCorredorOnibus(16, 20, "Avenida Santo Amaro")); // Corredor de ônibus das 16h às 20h
+}
+
 
   public void adicionarOcorrencia(Ocorrencia ocorrencia) { //adiciona uma ocorrencia não processada
     ocorrenciasSemProcessar.add(ocorrencia);
