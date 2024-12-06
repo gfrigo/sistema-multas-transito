@@ -16,7 +16,8 @@ public class Main {
             System.out.println("2. Processar Ocorrências");
             System.out.println("3. Buscar Multas (por data ou placa)");
             System.out.println("4. Exibir Relatório de Multas");
-            System.out.println("5. Sair");
+            System.out.println("5. Cadastrar Regras");
+            System.out.println("6. Sair");
             System.out.print("Escolha uma opção: ");
             
             int opcao = scanner.nextInt();
@@ -43,6 +44,10 @@ public class Main {
                     break;
 
                 case 5:
+                    cadastrarRegras(scanner, baseDeDados);
+                    break;
+                    
+                case 6:
                     sair = true;
                     break;
 
@@ -124,4 +129,95 @@ public class Main {
                 System.out.println("Critério inválido.");
         }
     }
+
+    private static void cadastrarRegras(Scanner scanner, BaseDeDados baseDeDados) {
+      System.out.println("\n==== Cadastro de Regras ====");
+      System.out.println("Escolha o tipo de regra:");
+      System.out.println("1. Regra de Velocidade");
+      System.out.println("2. Regra de Rodízio");
+      System.out.println("3. Regra de Corredor de Ônibus");
+      System.out.print("Digite sua opção: ");
+  
+      int tipo = scanner.nextInt();
+      scanner.nextLine(); // Consome quebra de linha
+  
+      switch (tipo) {
+          case 1:
+              // Cadastro de RegraVelocidade
+              System.out.print("Digite o nome do logradouro: ");
+              String logradouroVel = scanner.nextLine();
+  
+              System.out.print("Digite a velocidade limite (km/h): ");
+              int velocidadeLimite = scanner.nextInt();
+              scanner.nextLine();
+  
+              if (velocidadeLimite > 0) {
+                  RegraVelocidade regraVel = new RegraVelocidade(velocidadeLimite, logradouroVel);
+                  baseDeDados.getRegras().add(regraVel);
+                  System.out.println("Regra de Velocidade cadastrada com sucesso!");
+              } else {
+                  System.out.println("Erro: Velocidade limite deve ser positiva.");
+              }
+              break;
+  
+          case 2:
+              // Cadastro de RegraRodizio
+              System.out.print("Digite o final da placa afetado (0 a 9): ");
+              int finalPlaca = scanner.nextInt();
+              scanner.nextLine();
+  
+              if (finalPlaca < 0 || finalPlaca > 9) {
+                  System.out.println("Erro: Final de placa inválido.");
+                  return;
+              }
+  
+              System.out.print("Digite o(s) logradouro(s) afetado(s), separados por vírgula: ");
+              String logradouros = scanner.nextLine();
+              String[] logradourosAfetados = logradouros.split(",");
+  
+              System.out.print("Digite o dia da semana afetado (1 = Domingo, 7 = Sábado): ");
+              int diaDaSemana = scanner.nextInt();
+              scanner.nextLine();
+  
+              if (diaDaSemana < 1 || diaDaSemana > 7) {
+                  System.out.println("Erro: Dia da semana inválido.");
+                  return;
+              }
+  
+              System.out.print("Digite o tipo de veículo (0 - Veículo leve, 1 - Caminhão): ");
+              int tipoVeiculo = scanner.nextInt();
+              scanner.nextLine();
+  
+              RegraRodizio regraRod = new RegraRodizio(finalPlaca, logradourosAfetados, diaDaSemana, tipoVeiculo);
+              baseDeDados.getRegras().add(regraRod);
+              System.out.println("Regra de Rodízio cadastrada com sucesso!");
+              break;
+  
+          case 3:
+              // Cadastro de RegraCorredorOnibus
+              System.out.print("Digite o nome do logradouro: ");
+              String logradouroOnibus = scanner.nextLine();
+  
+              System.out.print("Digite a hora inicial (0 a 23): ");
+              int horaInicial = scanner.nextInt();
+  
+              System.out.print("Digite a hora final (0 a 23): ");
+              int horaFinal = scanner.nextInt();
+              scanner.nextLine();
+  
+              if (horaInicial < 0 || horaInicial > 23 || horaFinal < 0 || horaFinal > 23 || horaInicial >= horaFinal) {
+                  System.out.println("Erro: Horário inválido.");
+                  return;
+              }
+  
+              RegraCorredorOnibus regraOnibus = new RegraCorredorOnibus(horaInicial, horaFinal, logradouroOnibus);
+              baseDeDados.getRegras().add(regraOnibus);
+              System.out.println("Regra de Corredor de Ônibus cadastrada com sucesso!");
+              break;
+  
+          default:
+              System.out.println("Opção inválida.");
+      }
+  }
+  
 }

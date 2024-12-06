@@ -19,9 +19,9 @@ public class BaseDeDados {
     regras.add(new RegraVelocidade(60, "Avenida Paulista"));
     regras.add(new RegraVelocidade(50, "Avenida Rebouças"));
 
-    // Adiciona algumas regras de rodízio
-    regras.add(new RegraRodizio(1, new String[]{"Avenida Airton Sena"}, 2, 0)); // Final de placa 1, veículos leves, terça-feira
-    regras.add(new RegraRodizio(7, new String[]{"Marginal Tietê"}, 1, 1)); // Final de placa 7, caminhões, quinta-feira
+    // Adiciona algumas regras de rodízio, dias são 1 a 7, sendo 1 = domingo e 7 = sábado
+    regras.add(new RegraRodizio(1, new String[]{"Avenida Airton Sena"}, 2, 0)); // Final de placa 1, veículos leves, segunda
+    regras.add(new RegraRodizio(7, new String[]{"Marginal Tietê"}, 1, 1)); // Final de placa 7, caminhões, domingo
 
     // Adiciona algumas regras de corredor de ônibus
     regras.add(new RegraCorredorOnibus(6, 10, "Rua Consolação")); // Corredor de ônibus das 6h às 10h
@@ -74,6 +74,10 @@ public class BaseDeDados {
   public List<Multa> getMultas() {
       return multas;
   }
+
+  public List<RegraMulta> getRegras() {
+    return regras;
+}
   
 }
 

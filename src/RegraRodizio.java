@@ -24,7 +24,7 @@ public class RegraRodizio extends RegraMulta {
     Calendar data = Calendar.getInstance();
     data.setTime(ocorrencia.getData());
 
-    diaDaSemana = data.get(Calendar.DAY_OF_WEEK); // dias da semana, pelo que vi é: domingo = 1, segunda = 2.... sab = 7
+    diaDaSemana = data.get(Calendar.DAY_OF_WEEK); // 1 a 7, sendo 1 = domingo e 7 = sábado
     finalPlaca = Integer.parseInt(placa.substring(placa.length() - 1)); // aqui pega o ultimo digito da placa
 
     if (diaDaSemana == Calendar.SATURDAY || diaDaSemana == Calendar.SUNDAY) { //aqui verifica se é final de semana, se for, ignora o rodizio
