@@ -6,11 +6,12 @@ public class RegraRodizio extends RegraMulta {
   private int diaDaSemana;
   private int tipoVeiculo;
 
-  public RegraRodizio(/*int placa, String[] logra, int dia, int tipoVeic*/){
-    /*this.finalPlaca = placa;
-    this.logradourosAfetados = logra;
-    this.diaDaSemana = dia;
-    this.tipoVeiculo = tipoVeic;*/
+  public RegraRodizio(int velocidadeMaxima, String nomeLogradouro) {
+    super(nomeLogradouro);
+    this.finalPlaca = finalPlaca;
+    this.logradourosAfetados = logradourosAfetados;
+    this.diaDaSemana = diaDaSemana;
+    this.tipoVeiculo = tipoVeiculo;
   }
 
     /* Implementar métodos abstratos: 
@@ -65,10 +66,11 @@ public class RegraRodizio extends RegraMulta {
     return NivelMulta.SEM_MULTA.getCodigo(); // Fora do rodízio
   }
   @Override
-  public String obterDescricaoMulta(Ocorrencia ocorrencia){
-    return " Veículo circulando em dia e horário proibidos pelo rodízio em " +
-                ocorrencia.getNomeLogradouro() + ". Último dígito da placa: " +
-                ocorrencia.getPlaca().substring(ocorrencia.getPlaca().length() - 1) + ".";
-  };
+  public String obterDescricaoMulta(Ocorrencia ocorrencia) {
+    return "Infração de rodízio em logradouros afetados (" + String.join(", ", logradourosAfetados) +
+           ") para veículos do tipo " + TipoVeiculo.getDescricaoPorCodigo(tipoVeiculo) +
+           " com placa terminada em " + finalPlaca +
+           " no dia " + diaDaSemana + ".";
+  }
 
 }

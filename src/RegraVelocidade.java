@@ -1,12 +1,12 @@
 public class RegraVelocidade extends RegraMulta {
-  private int velocidadeMaxima = 60; //podemos alterar o valor, coloquei para teste
+  private int velocidadeMaxima; //podemos alterar o valor, coloquei para teste
   private String nomeLogradouro; //tem que colocar alguma coisa pra puxar isso aqui
   private static double porcentagemMultaMedia = 0.1; //10%
   private static double porcentagemMultaGrave = 0.4; //40%
 
-  public RegraVelocidade(/*int velMax, String logra*/){
-    /*this.velocidadeMaxima = velMax;
-    this.nomeLogradouro = logra;*/
+  public RegraVelocidade(int velocidadeMaxima, String nomeLogradouro) {
+    super(nomeLogradouro);
+    this.velocidadeMaxima = velocidadeMaxima;
   }
 
   /* Implementar métodos abstratos: 

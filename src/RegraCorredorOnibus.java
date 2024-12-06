@@ -3,11 +3,12 @@ public class RegraCorredorOnibus extends RegraMulta{
   private int horaFinal;
   private String nomeLogradouro;
 
-  public RegraCorredorOnibus(/*int inicio, int fim, String logra*/){
-    /*this.horaInicial = inicio;
-    this.horaFinal = fim;
-    this.nomeLogradouro = logra;*/
-  }
+  public RegraCorredorOnibus(String nomeLogradouro, int horaInicial, int horaFinal) {
+    super(nomeLogradouro); // Define o logradouro no construtor da superclasse
+    this.horaInicial = horaInicial;
+    this.horaFinal = horaFinal;
+    this.nomeLogradouro = nomeLogradouro;
+}
 
     /* Implementar métodos abstratos: 
   ->verificaNivelMulta()
@@ -23,9 +24,9 @@ public class RegraCorredorOnibus extends RegraMulta{
   };
 
   @Override
-  public String obterDescricaoMulta(Ocorrencia ocorrencia){
-    return "Veículo trafegando em corredor exclusivo de ônibus em " +
-                ocorrencia.getNomeLogradouro() + ".";
-  };
+  public String obterDescricaoMulta(Ocorrencia ocorrencia) {
+    return "Trânsito irregular no corredor de ônibus em " + nomeLogradouro +
+           " no horário entre " + horaInicial + "h e " + horaFinal + "h.";
+}
 
 }
