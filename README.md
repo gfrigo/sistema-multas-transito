@@ -1,10 +1,10 @@
 <h1 align="center"> Sistema-Multas-Trânsito </h1>
 
 # Integrantes 
-# Breno Amorim Candido
-# Bruno Augusto dos Santos Pereira
-# Gabriel Ferreira Delinardi
-# Gabriel Frigo Sena
+- Breno Amorim Candido
+- Bruno Augusto dos Santos Pereira
+- Gabriel Ferreira Delinardi
+- Gabriel Frigo Sena
 
 O projeto em que trabalhamos DETRAN/SP consiste no desenvolvimento de um sistema em **Java** para controle e gerenciamento de multas de trânsito na cidade de São Paulo. Este sistema deve atender a diferentes tipos de infrações, como excesso de velocidade, desrespeito ao rodízio municipal de veículos e circulação irregular em corredores exclusivos de ônibus. O objetivo é automatizar a análise de ocorrências e aplicação de multas, fornecendo uma solução eficiente e moderna para o gerenciamento de infrações.
 
