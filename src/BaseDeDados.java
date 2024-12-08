@@ -38,12 +38,12 @@ public class BaseDeDados {
 
 
     //adicionando algumas regras de corredor de ônibus
-    regras.add(new RegraCorredorOnibus(6, 22, "Rua Consolação")); // Corredor de ônibus das 6h às 10h
-    regras.add(new RegraCorredorOnibus(6, 22, "Avenida Santo Amaro")); // Corredor de ônibus das 16h às 20h
-    regras.add(new RegraCorredorOnibus(6, 22, "Marginal Pinheiros")); // Corredor de ônibus das 6h às 10h
-    regras.add(new RegraCorredorOnibus(6, 22, "Avenida das Nações Unidas")); // Corredor de ônibus das 8h às 14h
-    regras.add(new RegraCorredorOnibus(6, 22, "Avenida Rebouças")); // Corredor de ônibus das 6h ao 12h
-    regras.add(new RegraCorredorOnibus(6, 22, "Avenida Ayrton Senna")); // Corredor de ônibus das 16h às 20h
+    regras.add(new RegraCorredorOnibus(6, 22, "Rua Consolação")); // Corredor de ônibus das 6h às 22h
+    regras.add(new RegraCorredorOnibus(6, 22, "Avenida Santo Amaro")); 
+    regras.add(new RegraCorredorOnibus(6, 22, "Marginal Pinheiros")); 
+    regras.add(new RegraCorredorOnibus(6, 22, "Avenida das Nações Unidas")); 
+    regras.add(new RegraCorredorOnibus(6, 22, "Avenida Rebouças")); 
+    regras.add(new RegraCorredorOnibus(6, 22, "Avenida Ayrton Senna")); 
     regras.add(new RegraCorredorOnibus(6, 22, "Avenida Eng. Eusébio Stevaux"));
     regras.add(new RegraCorredorOnibus(6, 22, "Avenida Paulista"));
 }
