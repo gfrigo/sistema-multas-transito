@@ -14,7 +14,7 @@ public class Main {
             System.out.println("\n==== DETRAN - Sistema de Gerenciamento de Multas ====");
             System.out.println("1. Cadastrar Ocorrência");
             System.out.println("2. Processar Ocorrências");
-            System.out.println("3. Buscar Multas (por data ou placa)");
+            System.out.println("3. Buscar Multas (data/placa)");
             System.out.println("4. Exibir Relatório de Multas");
             System.out.println("5. Cadastrar Regras");
             System.out.println("6. Sair");
