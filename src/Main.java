@@ -39,7 +39,7 @@ public class Main {
                     break;
 
                 case 4:
-                    System.out.println("Gerando relatorio das multas...\n");
+                    //System.out.println("Gerando relatorio das multas...\n");
                     baseDeDados.exibirRelatorioMultas(); // aqui mostra os relatorios das multas
                     break;
 

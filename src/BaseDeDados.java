@@ -79,9 +79,10 @@ public class BaseDeDados {
 
   // gera o relatorio de multas
   public void exibirRelatorioMultas() {
-      for (Multa multa : multas) {
-        System.out.println(multa);
-      }
+    System.out.println(this.multas);
+    for (Multa multa : multas) {
+      System.out.println(multa + "\n");
+    }
   }
 
   public List<Ocorrencia> getOcorrenciasSemProcessar() {
