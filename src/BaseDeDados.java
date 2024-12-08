@@ -29,17 +29,23 @@ public class BaseDeDados {
 
     //adicionando algumas regras de rodízio, dias de 1 a 7, sendo 1 = domingo e 7 = sábado
     regras.add(new RegraRodizio(1, new String[]{"Avenida Ayrton Senna"}, 2, 0)); // Final de placa 1, veículos leves, segunda
-    regras.add(new RegraRodizio(7, new String[]{"Marginal Tietê"}, 1, 1)); // Final de placa 7, caminhões, domingo
-    regras.add(new RegraRodizio(5, new String[]{"Marginal Pinheiros"}, 4, 1)); // Final de placa 5, caminhões, quarta-feira
-    regras.add(new RegraRodizio(3, new String[]{"Avenida Rebouças"}, 5, 0)); // Final de placa 3, veículo leve, quinta-feira
+    regras.add(new RegraRodizio(7, new String[]{"Marginal Tietê"}, 3, 1)); // Final de placa 7, caminhões, domingo
+    regras.add(new RegraRodizio(5, new String[]{"Marginal Pinheiros"}, 4, 0)); // Final de placa 5, caminhões, quarta-feira
+    regras.add(new RegraRodizio(3, new String[]{"Avenida Rebouças"}, 5, 1)); // Final de placa 3, veículo leve, quinta-feira
+    regras.add(new RegraRodizio(2, new String[]{"Rua Clélia"}, 6, 0));
+    regras.add(new RegraRodizio(4, new String[]{"Avenida das Nações Unidas"}, 2, 1));
+    regras.add(new RegraRodizio(8, new String[]{"Avenida Eng. Eusébio Stevaux"}, 4, 0));
+
 
     //adicionando algumas regras de corredor de ônibus
-    regras.add(new RegraCorredorOnibus(6, 10, "Rua Consolação")); // Corredor de ônibus das 6h às 10h
-    regras.add(new RegraCorredorOnibus(16, 20, "Avenida Santo Amaro")); // Corredor de ônibus das 16h às 20h
-    regras.add(new RegraCorredorOnibus(6, 10, "Marginal Pinheiros")); // Corredor de ônibus das 6h às 10h
-    regras.add(new RegraCorredorOnibus(8, 14, "Avenida das Nações Unidas")); // Corredor de ônibus das 8h às 14h
-    regras.add(new RegraCorredorOnibus(6, 12, "Avenida Rebouças")); // Corredor de ônibus das 6h ao 12h
-    regras.add(new RegraCorredorOnibus(16, 20, "Avenida Ayrton Senna")); // Corredor de ônibus das 16h às 20h
+    regras.add(new RegraCorredorOnibus(6, 22, "Rua Consolação")); // Corredor de ônibus das 6h às 10h
+    regras.add(new RegraCorredorOnibus(6, 22, "Avenida Santo Amaro")); // Corredor de ônibus das 16h às 20h
+    regras.add(new RegraCorredorOnibus(6, 22, "Marginal Pinheiros")); // Corredor de ônibus das 6h às 10h
+    regras.add(new RegraCorredorOnibus(6, 22, "Avenida das Nações Unidas")); // Corredor de ônibus das 8h às 14h
+    regras.add(new RegraCorredorOnibus(6, 22, "Avenida Rebouças")); // Corredor de ônibus das 6h ao 12h
+    regras.add(new RegraCorredorOnibus(6, 22, "Avenida Ayrton Senna")); // Corredor de ônibus das 16h às 20h
+    regras.add(new RegraCorredorOnibus(6, 22, "Avenida Eng. Eusébio Stevaux"));
+    regras.add(new RegraCorredorOnibus(6, 22, "Avenida Paulista"));
 }
 
 
