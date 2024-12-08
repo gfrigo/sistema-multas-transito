@@ -69,6 +69,7 @@ public class BaseDeDados {
       // após finalizar, move a ocorrencia para a lista de ja processadas
       if (foiProcessada) {
           ocorrenciasProcessadas.add(ocorrencia);
+          System.out.println("Ocorrência processada: " + ocorrencia);
       }
     }
 
