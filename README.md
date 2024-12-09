@@ -8,7 +8,7 @@
 
 # Vídeo do Grupo
 O vídeo abaixo é um explicativo do projeto e demonstração de seu funcionamento:
-- Link Youtube: 
+- Link Youtube: https://www.youtube.com/watch?v=BnzyrNhD3tc
 
 # Introdução
 O projeto em que trabalhamos DETRAN/SP consiste no desenvolvimento de um sistema em **Java** para controle e gerenciamento de multas de trânsito na cidade de São Paulo. Este sistema deve atender a diferentes tipos de infrações, como excesso de velocidade, desrespeito ao rodízio municipal de veículos e circulação irregular em corredores exclusivos de ônibus. O objetivo é automatizar a análise de ocorrências e aplicação de multas, fornecendo uma solução eficiente e moderna para o gerenciamento de infrações.
